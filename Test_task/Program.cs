@@ -4,7 +4,20 @@
 // лучше обойтись исключительно массивами.
 
 
-Console.WriteLine("Enter number :");
-string strNum = Console.ReadLine();
-int num = int.Parse(strNum);
-Console.WriteLine(num);
+int n = 1;
+string[] strs = new string[n];
+for (int i = 0; i < n; i++)
+{
+    Console.Write("Введите строку {0}:\r\n    ", i + 1);
+    strs[i] = Console.ReadLine();
+}
+Console.WriteLine("Вы ввели следующие значения:");
+for (int i = 0; i < n; i++)
+{
+    Console.WriteLine(strs[i]);
+}
+
+string GetNewArray(string[] array)
+{
+
+}

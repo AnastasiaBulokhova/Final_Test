@@ -5,25 +5,31 @@
 
 string[] GetArray(int length = 1)
 {
-    // int n = 1;
     string[] strs = new string[length];
     for (int i = 0; i < strs.Length; i++)
     {
         Console.Write("Введите строку {0}:\r\n    ", i + 1);
         strs[i] = Console.ReadLine();
     }
-    Console.WriteLine("Вы ввели следующие значения:");
-    for (int i = 0; i < strs.Length; i++)
-    {
-        Console.WriteLine(strs[i]);
-    }
     return strs;
 }
 
-string GetNewArray(string[] array)
-{
+string[] newArray = new string[lenNewArray];
+int idx = 0;
 
+for (int i = 0; i <= array.Length - 1; i++)
+{
+    if (array[i].Length <= 3)
+    {
+        newArray[idx] = array[i];
+        idx++;
+    }
 }
 
 
+
+
+
 string[] array = GetArray();
+Console.WriteLine("->");
+

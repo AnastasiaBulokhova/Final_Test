@@ -3,7 +3,7 @@
 // либо задать на старте выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями,
 // лучше обойтись исключительно массивами.
 
-string[] GetArray(string message) //метод считывает значения с консоли
+string[] GetArray(string message)
 {
     System.Console.WriteLine(message);
     string value = Console.ReadLine()!;

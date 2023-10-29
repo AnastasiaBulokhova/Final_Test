@@ -3,17 +3,12 @@
 // либо задать на старте выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями,
 // лучше обойтись исключительно массивами.
 
-
-
-string[] GetArray(int length = 1)
+string[] GetArray(string message) //метод считывает значения с консоли
 {
-    string[] array = new string[length];
-    for (int i = 0; i < length; i++)
-    {
-        Console.Write("Введите строку {0}:\r\n    ", i + 1);
-        array[i] = Console.ReadLine();
-    }
-    return array;
+    System.Console.WriteLine(message);
+    string value = Console.ReadLine()!;
+    string[] res = value.Split(new char[] {' '});
+    return res;
 }
 
 int ArraySize(string[] array)
@@ -54,7 +49,7 @@ void PrintArray(string[] array)
 }
 
 
-string[] array = GetArray();
+string[] array = GetArray($"Введите строку через пробел: ");
 Console.WriteLine("-->");
 int size = ArraySize(array);
 string[] fixedArray = NewArray(array, size);
